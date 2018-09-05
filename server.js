@@ -70,6 +70,7 @@ function gateKeeper(req, res, next) {
   const foundUser = USERS.find(person => (person.userName === user) && (person.password === pass));
   if(foundUser) {
     req.user = foundUser;
+  }
   next();
 }
 
